@@ -5,7 +5,7 @@ function pauseCounter() {
   return function () {
     let diffTime = Date.parse(new Date());
     startTime = diffTime - startTime;
-    if (startTime === 0) {
+    if (!(startTime)) {
       console.log(`Enabled`);
       startTime = diffTime;
     } else {

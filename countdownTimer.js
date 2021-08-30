@@ -1,17 +1,24 @@
 "use strict";
 //1)
-let getTime = (function () {
+function pauseCounter() {
   let startTime = Date.parse(new Date());
   return function () {
-    let dateInMoment = Date.parse(new Date());
-    if (!(dateInMoment - startTime)) {
+    let diffTime = Date.parse(new Date());
+    startTime = diffTime - startTime;
+    if (startTime === 0) {
       console.log(`Enabled`);
+      startTime = diffTime;
+    } else {
+      console.log(`${startTime / 1000} seconds have passed`);
+      startTime = diffTime;
     }
-    return `${(dateInMoment - startTime) / 1000} seconds have passed`;
-  };
-})();
+  }
+}
 
-getTime();
+let getTime = pauseCounter();
+setTimeout(() => getTime());
+setTimeout(() => getTime(), 2000);
+setTimeout(() => getTime(), 5000);
 
 
 //2)
@@ -39,5 +46,6 @@ const TIMER = time => {
   }
   let timerID = setInterval(countdownTimer, 1000);
 }
-
-TIMER(5);
+//TIMER(120);
+//TIMER(65);
+//TIMER(5);

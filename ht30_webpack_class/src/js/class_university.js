@@ -68,8 +68,8 @@ export default class University {
     // this.#generalArrOfStudents.forEach(student => {
     //   console.log(`University: ${this.universityName}\nName: ${student.name}\nSurname: ${student.surname}\nSelf-payment: ${student.isSelfPayment}`);
     // });
-    //или (хотя log и в main норм записать. может, даже лучше)
-    console.log(this.#generalArrOfStudents)
+    //или 
+    return this.#generalArrOfStudents
   }
 
   getNonSelfPaymentStudents() {
@@ -87,7 +87,7 @@ export default class University {
     //   }
     // });
     //или
-    console.log(this.#generalArrOfStudents.filter(student => !(student.isSelfPayment)));
+    return this.#generalArrOfStudents.filter(student => !(student.isSelfPayment))
   }
 
   //методы на удаления после написания логики под одинакового рейтинга

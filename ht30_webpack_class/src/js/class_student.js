@@ -1,7 +1,13 @@
-import { studentID } from "./func_studentID";
+function id() {
+  let id = 0;
+  return function () {
+    return ++id;
+  }
+}
+let studentID = id();
 
 export default class Student {
-  constructor({ name, surname, ratingPoint, schoolPoint } = enrollee) {
+  constructor({ name, surname, ratingPoint, schoolPoint }) {
     this.id = studentID();
     this.name = name;
     this.surname = surname;

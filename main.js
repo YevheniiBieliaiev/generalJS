@@ -14,7 +14,7 @@ const student = {
   }
 }
 
-function Aspirant(firstName, lastName, diserStatus) {
+function Aspirant(firstName, lastName, disserStatus) {
   this.__proto__ = student;
   this.firstName = firstName;
   this.lastName = lastName;

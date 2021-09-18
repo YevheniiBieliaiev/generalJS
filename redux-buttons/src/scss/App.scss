@@ -1,0 +1,39 @@
+@import "Reset.scss";
+
+.App {
+  width: 400px;
+  padding: 40px;
+  margin: auto;
+  .button__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    button {
+      width: 90px;
+      height: 35px;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      color: #faf0c7;
+      font-weight: bold;
+      letter-spacing: 1.3px;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 1;
+      }
+    }
+    button[value="red"] {
+      background: red;
+    }
+    button[value="green"] {
+      background: green;
+    }
+    button[value="blue"] {
+      background: blue;
+    }
+  }
+}

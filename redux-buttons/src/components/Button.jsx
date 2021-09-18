@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import changeColor from "../action/change_color";
+import { colorsArray } from "../ButtonsColorArray";
+import gID from "../Generator";
 
 function ButtonWrapper() {
   const backgroundColor = useSelector((state) => state.backgroundColor);
@@ -11,26 +13,17 @@ function ButtonWrapper() {
 
   return (
     <div className="button__wrapper">
-      <button
-        style={{ background: backgroundColor }}
-        value="green"
-        onClick={(e) => setChangeColor(e.target.value)}>
-        Green
-      </button>
-
-      <button
-        style={{ background: backgroundColor }}
-        value="red"
-        onClick={(e) => setChangeColor(e.target.value)}>
-        Red
-      </button>
-
-      <button
-        style={{ background: backgroundColor }}
-        value="blue"
-        onClick={(e) => setChangeColor(e.target.value)}>
-        Blue
-      </button>
+      {colorsArray.map(color => {
+        return (
+          <button
+            key={gID()}
+            style={{ background: backgroundColor }}
+            value={color.toLowerCase()}
+            onClick={(e) => setChangeColor(e.target.value)}>
+            {color}
+          </button>
+        );
+      })}
     </div>
   );
 }

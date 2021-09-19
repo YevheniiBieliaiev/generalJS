@@ -1,6 +1,7 @@
+import { ACTION_CHANGE_COLOR } from "../constants";
 
 const changeColor = (colorValue) => ({
-  type: "change background color of buttons",
+  type: ACTION_CHANGE_COLOR,
   payload: colorValue
 })
 

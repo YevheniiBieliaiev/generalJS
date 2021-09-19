@@ -1,0 +1,1 @@
+export const ACTION_CHANGE_COLOR = "change background color of buttons";

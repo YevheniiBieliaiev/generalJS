@@ -1,4 +1,4 @@
-
+import { ACTION_CHANGE_COLOR } from "../constants";
 
 
 const defaultColors = {
@@ -6,7 +6,7 @@ const defaultColors = {
 }
 
 const colorReducer = (state = defaultColors, action) => {
-  if (action.type) {
+  if (action.type === ACTION_CHANGE_COLOR) {
     return {
       backgroundColor: action.payload
     }

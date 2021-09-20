@@ -1,0 +1,1 @@
+export const colorsArray = ["Green", "Red", "Blue"];

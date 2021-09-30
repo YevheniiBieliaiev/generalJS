@@ -1,0 +1,24 @@
+.videoblock__wrapper {
+  display: flex;
+  flex-direction: row;
+  .videolist__wrapper {
+    margin: 10px;
+    height: 550px;
+    overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #a05cad;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+  }
+}

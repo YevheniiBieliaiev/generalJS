@@ -1,0 +1,23 @@
+@import "reset.scss";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+body {
+  background: #e9e9e9;
+  font-family: "Libre Baskerville", serif;
+}
+
+input {
+  font-family: "Libre Baskerville", serif;
+}

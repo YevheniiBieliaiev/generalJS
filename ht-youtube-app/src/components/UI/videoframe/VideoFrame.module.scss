@@ -1,0 +1,28 @@
+.videoframe__block {
+  display: flex;
+  flex-direction: column;
+  .video__frame {
+    margin: 10px;
+    width: 800px;
+    height: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  .frame__text__block {
+    width: 800px;
+    margin: 10px;
+    .video__title {
+      display: block;
+      padding: 0 15px;
+      margin-bottom: 15px;
+      color: #260c44;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .video__description {
+      padding: 0 15px;
+      color: rgb(14, 41, 82);
+      line-height: 22px;
+    }
+  }
+}

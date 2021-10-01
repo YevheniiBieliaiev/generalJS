@@ -16,8 +16,7 @@ export default class App extends Component {
   }
 
   onSearchSubmit = async (query) => {
-    const response = await searchVideos(query);
-    const { data: { items } } = response
+    const { data: { items } } = await searchVideos(query);
     this.setState({
       videos: items,
       startFrameURL: items[0].id.videoId,
@@ -27,14 +26,15 @@ export default class App extends Component {
   }
 
   render() {
+    const { videos, startFrameURL, startFrameURLIframeTitle, startDescription } = this.state;
     return (
       <React.Fragment>
         <Input onSubmit={this.onSearchSubmit} />
         <VideoBlock
-          videos={this.state.videos}
-          startFrameURL={this.state.startFrameURL}
-          startFrameURLIframeTitle={this.state.startFrameURLIframeTitle}
-          startDescription={this.state.startDescription} />
+          videos={videos}
+          startFrameURL={startFrameURL}
+          startFrameURLIframeTitle={startFrameURLIframeTitle}
+          startDescription={startDescription} />
       </React.Fragment>
     )
   }

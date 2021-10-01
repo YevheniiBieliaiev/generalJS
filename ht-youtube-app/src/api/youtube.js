@@ -3,7 +3,10 @@ import { API_KEY, URL } from "../key&URL/APIkey";
 
 // main response
 const youtubeAxios = axios.create({
-  baseURL: URL
+  baseURL: URL,
+  params: {
+    key: API_KEY,
+  }
 });
 
 export function searchVideos(query) {
@@ -11,7 +14,6 @@ export function searchVideos(query) {
     params: {
       maxResults: 15,
       q: query,
-      key: API_KEY
     }
   })
 }
